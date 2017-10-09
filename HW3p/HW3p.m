@@ -204,7 +204,7 @@ M = k;
 % Saves data in required vars
 save('maunaloa_data.mat','maunaloaCO2', 'myear','mmonth', 'mco2', 'mtime', 'M')
 
-% Plot the CO2 levels over time:
+% Plot the CO2 levels over modern times
 figure;
 plot(mtime, mco2)
 
@@ -212,10 +212,16 @@ title ('CO2 levels over Modern Times');
 ylabel ('CO2 concentration (ppmv)');
 xlabel ('Years');
 
+% END Plot the CO2 levels over modern times
+
 % QUESTIONS TO DISCUSS IN YOUR REPORT
 % -Plot the CO2 levels over modern times
 % -Can you determine (roughly) the period of the oscillations?
-% -What could cause this?
+%   - Appears to happen once a year with the peak occurring towards the middle of the
+%       year
+% -What could cause this? 
+%   - possibly higher gas consumption during the
+%   nicer parts of the year
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
