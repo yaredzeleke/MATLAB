@@ -158,7 +158,6 @@ for i = 1:size(maunaloaCO2,1)                       % Loop over the rows of the 
     end
  
 end
-myear
 
 k=0;
 for i = 1:size(maunaloaCO2,1)                       % Loop over the rows of the matrix.
@@ -171,7 +170,7 @@ for i = 1:size(maunaloaCO2,1)                       % Loop over the rows of the 
     end
  
 end
-mmonth
+
 
 k=0;
 for i = 1:size(maunaloaCO2,1)                       % Loop over the rows of the matrix.
@@ -184,7 +183,7 @@ for i = 1:size(maunaloaCO2,1)                       % Loop over the rows of the 
     end
  
 end
-mco2
+
 
 k=0;
 for i = 1:size(maunaloaCO2,1)                               % Loop over the rows of the matrix.
@@ -197,7 +196,12 @@ for i = 1:size(maunaloaCO2,1)                               % Loop over the rows
     end
  
 end
-mtime
+
+%uncomment to view data
+%myear
+%mmonth
+%mco2
+%mtime
 
 M = k;
 
@@ -232,13 +236,29 @@ xlabel ('Years');
 % Remember that the Vostok data is in years before present, while the Mauna
 % Loa data are real dates.
 
+% initialize S to 0 to ensure accurate count of measurments
+S = 0;
 
-%'YOUR CODE GOES HERE'
+time = horzcat(myear,vyear);
+co2 = horzcat(mco2, vco2);
 
-
+S = V + M;
 
 % Plot the CO2 levels over time
+figure;
+plot(time, co2)
 
+% Reverse the x-axis since data is from 4xx,xxx years before
+% present(relatively speaking)
+set(gca, 'XDir', 'reverse')
+
+% removes scientific notation from years if uncommented
+%set(gca, 'XTickLabel', num2str(get(gca,'XTick')','%d'))
+
+title ('CO2 levels over time(Before 2005)');
+ylabel ('CO2 concentration (ppmv)');
+xlabel ('Years Before 2005');
+% END Plot
 
 %'YOUR CODE GOES HERE'
 
