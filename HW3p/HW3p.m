@@ -260,11 +260,9 @@ ylabel ('CO2 concentration (ppmv)');
 xlabel ('Years Before 2005');
 % END Plot
 
-%'YOUR CODE GOES HERE'
-
-
 % QUESTIONS TO DISCUSS IN YOUR REPORT
 % - What is the CO2 level in May 1986?
+    %350.23
 % - Given the calculated one standard deviation calculated using the Vostok ice core sample,
 %   is it likely that this modern spike is just one of many natural fluctuations?
 % - Can you estimate the probability that this modern spike is a natural fluctuation? (extra credit)
