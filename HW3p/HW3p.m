@@ -96,9 +96,9 @@ set(gca, 'XDir', 'reverse')
 % removes scientific notation from years if uncommented
 %set(gca, 'XTickLabel', num2str(get(gca,'XTick')','%d'))
 
-title ('CO2 levels over time(Before 1983)');
+title ('CO2 levels over time(Before Present)');
 ylabel ('CO2 concentration (ppmv)');
-xlabel ('Years Before 1983');
+xlabel ('Years Before Present');
 % END Plot
 
 % What is the range of variability of the CO2 levels?
@@ -111,7 +111,7 @@ fprintf('Standard deviation of CO2 levels: %f.\n', std(vco2));
 % Plot a histogram of the CO2 levels
 figure;
 hist(vco2)
-title ('Histogram of CO2 levels over time(Before 1983)');
+title ('Histogram of CO2 levels over time(Before Present)');
 ylabel ('Frequency');
 xlabel ('CO2 concentration (ppmv)');
 
